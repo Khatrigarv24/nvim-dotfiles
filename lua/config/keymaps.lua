@@ -6,6 +6,7 @@ local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "<Space>", "<Nop>", opts)
 vim.keymap.set("n", "<leader>w", ":w<CR>", opts)
 vim.keymap.set("n", "L", "<cmd>bnext<CR>", opts)
+vim.keymap.set("i", "jj", "<esc>", opts)
 
 vim.keymap.set("n", "<leader>bd", function()
 	local current_buf = vim.api.nvim_get_current_buf()
@@ -17,7 +18,7 @@ vim.keymap.set("n", "<C-h>", "<C-w>h", opts)
 vim.keymap.set("n", "<C-k>", "<C-w>k", opts)
 vim.keymap.set("n", "<C-j>", "<C-w>j", opts)
 vim.keymap.set("n", "<C-l>", "<C-w>l", opts)
-vim.keymap.set("n", "<leader>e", "<cmd>Oil<CR>", opts)
+vim.keymap.set("n", "<leader>e", "<cmd>Fyler<cr>")
 
 -- Telescope keybinds
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", opts)
@@ -34,3 +35,5 @@ vim.keymap.set("n", "<leader>cR", vim.lsp.buf.rename, opts)
 -- Git / Diffview keybinds
 vim.keymap.set("n", "<leader>gd", "<cmd>DiffviewOpen<cr>", opts)
 vim.keymap.set("n", "<leader>gh", "<cmd>DiffviewFileHistory<cr>", opts)
+
+vim.keymap.set("n", "<leader>mr", "<cmd>RenderMarkdown<CR>", { desc = "Render Markdown Preview" })
